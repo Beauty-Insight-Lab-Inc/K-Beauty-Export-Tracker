@@ -27,7 +27,7 @@ export default function MiniChart({ data, isPositive }: MiniChartProps) {
               boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)',
               fontSize: '12px'
             }}
-            formatter={(value: number) => [`$${value.toFixed(1)}M`, '']}
+            formatter={(value: any) => [`$${Number(value).toFixed(1)}M`, '']}
             labelFormatter={(label, payload) => {
               // Use the date from the actual data point
               if (payload && payload[0] && payload[0].payload.date) {
