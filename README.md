@@ -1,5 +1,7 @@
 # � K-Beauty Export Tracker (Professional Edition)
-
+<p align="center">
+  <img src="./dashboard.jpg" alt="K-Beauty Export Tracker Dashboard Preview" width="100%">
+</p>
 **2026년 화장품 산업의 핵심 키워드인 '수출 구조의 질적 성장'과 '글로벌 시장 다변화(Non-China Expansion)'를 실시간 데이터로 추적하는 전문가용 대시보드입니다.**
 
 현직 K-뷰티 수출 전략가 및 애널리스트가 전략 수립에 즉시 활용할 수 있도록, 단순 카테고리 합산을 넘어선 **정밀 품목 데이터(HSK)**와 **AI 기반 심층 분석**을 제공합니다.
