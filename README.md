@@ -8,7 +8,6 @@
 ## 🎯 기획 의도
 
 - **Trend Tracking**: '탈중국' 흐름과 '북미/일본/유럽' 등으로의 시장 다변화(Golden Cross) 시각화
-- **Premiumization**: 수출 중량 대비 단가(Unit Price) 분석을 통한 고부가가치화 추적
 - **Real-time Insight**: 관세청 실시간 API 연동 및 AI 자동 요약
 
 ---
@@ -22,18 +21,13 @@ HSK 2025 최신 분류 체계를 적용하여 14개 핵심 품목에 대한 개�
 - **헤어(Hair) & 바디**: 샴푸, 린스, 바디워시(3401 세정제 특화 매핑)
 - **기타**: 향수, 데오도런트
 
-### 2. 💰 수출 단가(Unit Price) 모니터링
-단순 수출액(Value) 뿐만 아니라, **중량(Weight) 대비 단가($/kg)**를 자동 계산하여 차트에 반영합니다.
-- 저가 물량 공세인지, 브랜드 프리미엄화인지 구분 가능
-- 차트 툴팁에서 즉시 확인 가능
-
-### 3. 🤖 Context-Aware AI 마켓 분석
+### 2. 🤖 Context-Aware AI 마켓 분석
 Google Gemini Pro 모델이 현재 선택된 품목(Item)과 시장 상황을 인지하여 분석합니다.
 - 단순 수치 나열이 아닌, **"왜(Why)"**에 집중한 전략적 인사이트 제공
 - 품목별 특이사항(예: 마스크팩 HS 코드 이슈) 자동 반영
 - 3단계 구조화된 리포트: Sentiment(심리) / Reasoning(원인) / Risks(리스크)
 
-### 4. 📈 Structural Shift Index
+### 3. 📈 Structural Shift Index
 **Non-China vs China** 수출 비중을 시각화하여 구조적 변화를 한눈에 파악합니다.
 
 ---
