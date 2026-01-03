@@ -31,6 +31,11 @@ Google Gemini Pro 모델이 현재 선택된 품목(Item)과 시장 상황을 �
 ### 3. Structural Shift Index
 **Non-China vs China** 수출 비중을 시각화하여 구조적 변화를 한눈에 파악합니다.
 
+### 4. Real-time Data Refresh (On-Demand)
+Next.js의 **On-Demand Revalidation** 기능을 통해 캐시된 데이터를 즉시 최신화할 수 있습니다. 관세청 API의 최신 업데이트를 대시보드에 즉각 반영합니다.
+###  팁: 보안 강화하기
+나중에 배포(Deploy) 시에는 아무나 `/api/revalidate`를 호출하지 못하도록 **Secret Token**을 검증하는 로직을 추가하는 것이 좋습니다. 
+
 ---
 
 ## Roadmap (Future Updates)
