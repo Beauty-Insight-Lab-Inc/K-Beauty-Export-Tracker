@@ -73,16 +73,24 @@ async function fetchFromProxy(hsCode: string, hsCode2?: string): Promise<Customs
         const period1Start = new Date(period1End);
         period1Start.setMonth(period1Start.getMonth() - 11);
 
-        const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
-
         // Helper to fetch for one period and one code
         const fetchPeriod = async (start: Date, end: Date, code: string) => {
-            const url = `${baseUrl}/api/korea-customs?startDate=${toYYYYMM(start)}&endDate=${toYYYYMM(end)}&hsCode=${code}`;
-            // console.log(`[KoreaCustoms] 요청: ${url}`);
-            const res = await fetch(url);
-            if (!res.ok) return [];
-            const json = await res.json();
-            return (json.success && json.data) ? json.data : [];
+            // Import dynamically or use directly if valid context
+            try {
+                // If we are strictly server-side, we can call the service directly.
+                // However, we need to handle the import.
+                // Since this runs in Next.js API Routes, we can use the service.
+                const { fetchStandardizedCustomsData } = await import('./customs-service');
+                const result = await fetchStandardizedCustomsData({
+                    strtYymm: toYYYYMM(start),
+                    endYymm: toYYYYMM(end),
+                    hsCode: code
+                });
+                return (result.success && result.data) ? result.data : [];
+            } catch (e) {
+                console.error('[KoreaCustoms] Direct Service Call Error:', e);
+                return [];
+            }
         };
 
         // Fetch Data
